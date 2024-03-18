@@ -1,3 +1,8 @@
+"""
+    by oPromessa, 2024
+    Published on https://github.com/oPromessa/nfoeditor
+"""
+
 import xml.etree.ElementTree as ET
 import sys
 import re
