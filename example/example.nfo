@@ -1,1 +1,32 @@
-
+<?xml version='1.0' encoding='utf-8'?>
+<movie>
+    <title>2001-05-01 Camera 001</title>
+    <originaltitle>2001-05-01 Camera 001</originaltitle>
+    <userrating>0</userrating>
+    <plot>Day out in Paris</plot>
+    <mpaa />
+    <uniqueid type="home" default="true" /> 
+    <genre />
+    <tag />
+    <country>###Country###</country>
+    <credits>XXXCreditsXXX</credits>
+    <director>Spielberg</director>
+    <premiered>2023-05-01</premiered> 
+    <studio>###Studio###</studio>
+    <actor>
+        <name>###Person 1XXX</name>
+        <role>###Person 1 (Herself)###</role>
+	<order>0</order>
+	<thumb>Person1.jpg</thumb>
+    </actor>
+    <actor>
+        <name>###Person 2XXX</name>
+        <role>###Person 2 (Himself)###</role>
+	<order>1</order>
+	<thumb>Person2.jpg</thumb>
+    </actor>
+    <set>
+       <name>Camera</name>
+       <overview>Family activities Video Recordings throughout the years.</overview>
+    </set>
+</movie>
