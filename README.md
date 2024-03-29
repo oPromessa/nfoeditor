@@ -10,4 +10,4 @@ Take a XLS database with NFO tags for your HomeVideo files and generate correspo
 
 ## You need Python 3.x
 * pandas: `pip install pandas`
-* ON the folder hwere you have the NFO files run: `python3 nfolist.py exmaple.xlsx`
+* On the folder where you have the NFO files to process (they may be in subfolder, one for each video) run: `python3 nfolist.py exmaple.xlsx`
