@@ -13,7 +13,7 @@ def edit_xml(xml_file, row, fields_to_edit):
     # Check if XML file exists
     if not os.path.exists(xml_file):
         print(f"Error: XML file '{xml_file}' not found.")
-        return
+        return False
     
     # Parse XML
     tree = ET.parse(xml_file)
@@ -63,9 +63,13 @@ def edit_xml(xml_file, row, fields_to_edit):
     # Write back to the same file while preserving comments
     tree.write(xml_file, encoding='utf-8', xml_declaration=True, method="xml")
 
+    return True
+
 def process_xls(xls_file):
     # Read the Excel file
     df = pd.read_excel(xls_file)
+    total_rows = 0
+    edited_rows = 0
 
     for index, row in df.iterrows():
         xml_file = row['xml filename']
@@ -78,7 +82,11 @@ def process_xls(xls_file):
                 fields_to_edit[parent] = {}
             fields_to_edit[parent][child] = field_type
 
-        edit_xml(xml_file, row, fields_to_edit)
+        if edit_xml(xml_file, row, fields_to_edit):
+            edited_rows += 1
+        total_rows += 1
+
+    print(f"Total rows processed:[{total_rows}] Out of which edited:[{edited_rows}]")
 
 if __name__ == "__main__":
     if len(sys.argv) != 2:
